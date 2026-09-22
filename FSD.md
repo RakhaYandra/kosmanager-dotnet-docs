@@ -24,6 +24,8 @@ mengonsumsi REST API (JWT). DB: MySQL 8 (EF Core + migrasi + seed fiktif).
 | `GET /api/payments/queue` | owner | belum verified |
 | `GET /api/dashboard` | owner | okupansi, kas, tunggakan, overdue, reminders |
 | `GET /api/dashboard/report.csv` | owner | header penghuni,periode,... |
+| `GET /api/dashboard/trend` | owner | kas + tunggakan 6 bulan terakhir |
+| `GET /api/bills/{id}/receipt.pdf` | owner / miliknya | QuestPDF, stempel LUNAS/BELUM |
 | `POST /api/notify/test` | owner | mock/telegram via `INotificationSender` |
 
 ## Scheduler

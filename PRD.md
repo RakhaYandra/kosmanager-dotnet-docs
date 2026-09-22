@@ -14,6 +14,8 @@
 6. Sebagai owner saya kelola kamar/penghuni dari web (tambah/ubah/hapus + import CSV).
 7. Sebagai penghuni saya daftar sendiri (register) tanpa bantuan owner.
 8. Sebagai owner saya unduh rekap CSV + filter tagihan per status (chips).
+9. Sebagai owner/penghuni saya unduh struk PDF per tagihan (stempel LUNAS/BELUM).
+10. Sebagai owner saya lihat grafik kas 6 bulan di dashboard.
 
 ## Kriteria terima (ringkas)
 

@@ -1,4 +1,4 @@
-# SRS — KosManager (IEEE 830)
+# SRS -- KosManager (IEEE 830)
 
 ## 1. Pendahuluan
 
@@ -14,31 +14,31 @@ QRIS, multi-kos, dark mode, webhook publik (lihat PRD Non-goals).
 
 ### 1.3 Definisi & Singkatan
 
-RBAC (role-based access control) · tenor (tanggal jatuh tempo, tgl-10) ·
-stage (H-3/H-1/H+1) · `reminded_stage` (penanda idempotensi reminder) ·
-seed fiktif (data contoh, bukan data nyata) · verified-local (terbukti di
-mesin dev) · verified-real (terbukti ke layanan asli, mis. Telegram HP).
+RBAC (role-based access control) * tenor (tanggal jatuh tempo, tgl-10) *
+stage (H-3/H-1/H+1) * `reminded_stage` (penanda idempotensi reminder) *
+seed fiktif (data contoh, bukan data nyata) * verified-local (terbukti di
+mesin dev) * verified-real (terbukti ke layanan asli, mis. Telegram HP).
 
 ### 1.4 Referensi
 
-BRD.md · PRD.md (US-01..US-10) · FSD.md (FS-01..FS-17) · ADR-002 (BE) ·
+BRD.md * PRD.md (US-01..US-10) * FSD.md (FS-01..FS-17) * ADR-002 (BE) *
 ADR-003/ADR-004 (FE).
 
 ### 1.5 Overview
 
-§2 konteks · §3 kebutuhan (antarmuka, fungsional, non-fungsional) ·
-§4 glosarium · §5 batasan · §6 traceability.
+S2 konteks * S3 kebutuhan (antarmuka, fungsional, non-fungsional) *
+S4 glosarium * S5 batasan * S6 traceability.
 
 ## 2. Deskripsi Umum
 
 ### 2.1 Perspektif Produk
 
-Sistem mandiri: Blazor → REST API → MySQL; scheduler internal; notifikasi
+Sistem mandiri: Blazor -> REST API -> MySQL; scheduler internal; notifikasi
 keluar via Telegram/Fonnte; analitik via snapshot DuckDB.
 
 ### 2.2 Karakteristik Pengguna
 
-Owner (1 orang, paham spreadsheet) · Penghuni (HP + Telegram opsional).
+Owner (1 orang, paham spreadsheet) * Penghuni (HP + Telegram opsional).
 
 ### 2.3 Lingkungan Operasi
 
@@ -46,7 +46,7 @@ Lokal/dev: Docker MySQL 8.4, .NET 8, browser modern. Tanpa server produksi.
 
 ### 2.4 Batasan
 
-$0 · repo publik (tanpa data nyata/secret) · scheduler lokal · teks Indonesia.
+$0 * repo publik (tanpa data nyata/secret) * scheduler lokal * teks Indonesia.
 
 ## 3. Kebutuhan Khusus
 
@@ -70,7 +70,7 @@ $0 · repo publik (tanpa data nyata/secret) · scheduler lokal · teks Indonesia
 | FR-BILL-01 | Generate bulanan idempoten, tenor tgl-10. |
 | FR-BILL-02 | List + filter status + daysLate; penghuni hanya miliknya. |
 | FR-BILL-03 | Struk PDF per tagihan (stempel LUNAS/BELUM; owner/miliknya). |
-| FR-PAY-01 | Bayar manual → pending; verifikasi owner → paid/unpaid + antrean. |
+| FR-PAY-01 | Bayar manual -> pending; verifikasi owner -> paid/unpaid + antrean. |
 | FR-DASH-01 | Okupansi, kas, tunggakan + hari telat; CSV; tren kas 6 bulan. |
 | FR-NTF-01 | Reminder H-3/H-1/H+1 sekali per tagihan; skip tanpa chat_id. |
 
@@ -84,16 +84,16 @@ $0 · repo publik (tanpa data nyata/secret) · scheduler lokal · teks Indonesia
 
 ## 4. Glosarium
 
-Tenor · stage · verified-local/real · seed fiktif · idempoten · RBAC —
-lihat §1.3.
+Tenor * stage * verified-local/real * seed fiktif * idempoten * RBAC --
+lihat S1.3.
 
 ## 5. Asumsi & Dependensi
 
-MySQL 8.4 Docker · .NET 8 SDK · QuestPDF Community (legal: individu/OSS) ·
-Telegram gratis (user /start dulu) · Fonnte free-tier cadangan.
+MySQL 8.4 Docker * .NET 8 SDK * QuestPDF Community (legal: individu/OSS) *
+Telegram gratis (user /start dulu) * Fonnte free-tier cadangan.
 
 ## 6. Traceability
 
-FR-AUTH-*→TC-AUTH-* · FR-ROOM-*→TC-ROOM-* · FR-TEN-*→TC-TEN-* ·
-FR-BILL-*→TC-BILL-* · FR-PAY-*→TC-PAY-* · FR-DASH-*→TC-DASH-* ·
-FR-NTF-*→TC-NOTIFY-* · FR-SEC/QLT/PERF→TC-SEC-*/CI · FR-08/09→UI 9/9.
+FR-AUTH-*->TC-AUTH-* * FR-ROOM-*->TC-ROOM-* * FR-TEN-*->TC-TEN-* *
+FR-BILL-*->TC-BILL-* * FR-PAY-*->TC-PAY-* * FR-DASH-*->TC-DASH-* *
+FR-NTF-*->TC-NOTIFY-* * FR-SEC/QLT/PERF->TC-SEC-*/CI * FR-08/09->UI 9/9.

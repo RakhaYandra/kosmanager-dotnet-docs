@@ -1,4 +1,4 @@
-# BRD — KosManager
+# BRD -- KosManager
 
 ## 1. Latar belakang
 
@@ -14,7 +14,7 @@ tunggakan tak tercatat, bukti bayar terserak. Skala: 1 kos, 5-30 kamar.
 
 ## 3. Stakeholder
 
-Owner (kelola penuh) · Penghuni (lihat + bayar tagihannya) · (Fase 2: multi-kos).
+Owner (kelola penuh) * Penghuni (lihat + bayar tagihannya) * (Fase 2: multi-kos).
 
 ## 4. Kebutuhan tingkat tinggi
 
@@ -31,4 +31,4 @@ Owner (kelola penuh) · Penghuni (lihat + bayar tagihannya) · (Fase 2: multi-ko
 
 ## 5. Batasan
 
-Repo publik (tanpa data nyata) · tanpa deploy (scheduler lokal) · $0.
+Repo publik (tanpa data nyata) * tanpa deploy (scheduler lokal) * $0.

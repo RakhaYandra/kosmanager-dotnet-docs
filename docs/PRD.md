@@ -18,6 +18,7 @@
 | US-08 | Sebagai owner saya unduh rekap CSV + filter tagihan per status (chips). | Done |
 | US-09 | Sebagai owner/penghuni saya unduh struk PDF per tagihan (stempel LUNAS/BELUM). | Done |
 | US-10 | Sebagai owner saya lihat grafik kas 6 bulan di dashboard. | Done |
+| US-11 | Sebagai penghuni saya tautkan Telegram via `/start <email>` dan lapor bayar via `SUDAH`. | Done |
 
 ## Kriteria terima (ringkas)
 
@@ -30,4 +31,4 @@
 
 ## Non-goals (Fase 2b)
 
-Denda otomatis, QRIS, multi-kos, dark mode, webhook publik.
+Denda otomatis, QRIS, multi-kos, dark mode. (Webhook publik diganti polling lokal — Done.)

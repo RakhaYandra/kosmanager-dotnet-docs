@@ -29,11 +29,14 @@ MiniProfiler di `/profiler/results`.
 | FS-15 | `GET /api/dashboard/trend` | owner | kas + tunggakan 6 bulan terakhir |
 | FS-16 | `GET /api/bills/{id}/receipt.pdf` | owner / miliknya | QuestPDF Community, stempel LUNAS/BELUM |
 | FS-17 | `POST /api/notify/test` | owner | mock/telegram via `INotificationSender` |
+| FS-18 | Polling inbound (tanpa endpoint) | sistem | getUpdates/10 dtk, offset file; `/start`, `SUDAH`; mode off/fake/live |
 
 ## Scheduler
 
 `ReminderService` (BackgroundService, tiap jam): H-3/H-1/H+1, skip tanpa
 chat_id, tulis `notification_logs`, idempoten via `reminded_stage`.
+`TelegramPollingService` (tiap 10 dtk): `/start <email>` tautkan chat,
+`SUDAH` catat pending; redelivery aman via offset (lihat ADR-005).
 
 ## Keamanan
 

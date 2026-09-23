@@ -73,6 +73,7 @@ $0 * repo publik (tanpa data nyata/secret) * scheduler lokal * teks Indonesia.
 | FR-PAY-01 | Bayar manual -> pending; verifikasi owner -> paid/unpaid + antrean. |
 | FR-DASH-01 | Okupansi, kas, tunggakan + hari telat; CSV; tren kas 6 bulan. |
 | FR-NTF-01 | Reminder H-3/H-1/H+1 sekali per tagihan; skip tanpa chat_id. |
+| FR-NTF-02 | Polling getUpdates/10 dtk (offset file): `/start <email>` tautkan, `SUDAH` catat pending; redelivery idempoten. |
 
 ### 3.3 Kebutuhan Non-Fungsional
 

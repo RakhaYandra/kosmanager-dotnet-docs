@@ -1,0 +1,13 @@
+# Output docs-to-pdf workflow
+pdf/
+*.pdf
+
+__pycache__/
+.venv/
+venv/
+.env
+.env.*
+!.env.example
+*.log
+.DS_Store
+Thumbs.db

@@ -21,7 +21,7 @@ mesin dev) * verified-real (terbukti ke layanan asli, mis. Telegram HP).
 
 ### 1.4 Referensi
 
-BRD.md * PRD.md (US-01..US-10) * FSD.md (FS-01..FS-17) * ADR-002 (BE) *
+BRD.md * PRD.md (US-01..US-11) * FSD.md (FS-01..FS-18) * ADR-002 (BE) *
 ADR-003/ADR-004 (FE).
 
 ### 1.5 Overview
@@ -81,7 +81,7 @@ $0 * repo publik (tanpa data nyata/secret) * scheduler lokal * teks Indonesia.
 |---|---|
 | FR-SEC-01 | Tanpa secret di repo (grep bersih); BCrypt; fail-fast config. |
 | FR-PERF-01 | Response <500ms lokal; read ter-cache (dash 60 dtk, bills/queue 30 dtk); MiniProfiler. |
-| FR-QLT-01 | Newman 25/25, QA 50/50, e2e 12/12, UI 9/9 tiap rilis. |
+| FR-QLT-01 | Newman 25/25, QA 54/54, e2e 12/12 tiap rilis (angka mengikuti repo qa). |
 
 ## 4. Glosarium
 
@@ -97,4 +97,4 @@ Telegram gratis (user /start dulu) * Fonnte free-tier cadangan.
 
 FR-AUTH-*->TC-AUTH-* * FR-ROOM-*->TC-ROOM-* * FR-TEN-*->TC-TEN-* *
 FR-BILL-*->TC-BILL-* * FR-PAY-*->TC-PAY-* * FR-DASH-*->TC-DASH-* *
-FR-NTF-*->TC-NOTIFY-* * FR-SEC/QLT/PERF->TC-SEC-*/CI * FR-08/09->UI 9/9.
+FR-NTF-*->TC-NOTIFY-01..09 * FR-SEC/QLT/PERF->TC-SEC-*/CI.

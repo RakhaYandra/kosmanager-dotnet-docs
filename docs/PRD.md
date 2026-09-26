@@ -25,7 +25,7 @@
 - Generate idempoten (periode sama 2x -> kedua 0).
 - Penghuni tak bisa akses data penghuni lain (403) -- diuji TC-BILL-02/TC-PAY-02/TC-BILL-10.
 - Reminder tak duplikat (kolom `reminded_stage`) -- diuji TC-NOTIFY-03.
-- Kontrak API di `postman_collection.json` (Newman 25/25).
+- Kontrak API di `postman_collection.json` (Newman 25/25, digate CI repo qa).
 - Web full coverage 17/17 endpoint (terverifikasi Playwright 9 aksi UI).
 - Struk valid `%PDF` + tren konsisten dashboard (TC-BILL-09, TC-DASH-05).
 
